@@ -73,12 +73,6 @@ GraphQL namespace and routes are returned by `createPackage()`. Routes include h
 - `src/entity`: 6 files
 - `migrations`: 3 files
 
-
-
-## Final gap closure
-
-See `docs/FINAL_GAP_CLOSURE_CONTRACTS.md` for the final process-monitor, project, node, workflow, and package-owned contract audit.
-
 ## Eighth pass swarm binding contract
 
 `@connectingmatrix/agent-swarm` manages 10-100 agent task runs and binds to the three agent systems instead of guessing ownership.
@@ -93,22 +87,3 @@ await AgentSwarm.run([
 ]);
 AgentSwarm.abort('PROCESS_ID', 'user aborted swarm');
 ```
-
-## Final runtime contracts
-
-See `docs/FINAL_RUNTIME_CONTRACTS.md` for the final package-owned API, routes, launcher, observability, and wiring contracts.
-
-
-## Final package contracts
-
-- `AgentSwarm.bindSystems({aiAgents,advancedAgents,gigaAgents})`
-- `AgentSwarm.run(tasks, runner?, concurrency?)`
-- `AgentSwarm.abortTask(runId, taskId)`
-- `AgentSwarm.abort(processId)`
-- `AgentSwarm.systems()`
-
-See `docs/AUTO_GENERATED_CONTRACTS.md` and `docs/OBSERVABILITY.md` for generated operational docs.
-
-## Ninth pass runtime queue/cache closure
-
-Swarm runtime status now exposes package-owned contracts for live runtime status, package observability, and launcher/test mode. Runtime state should come from queues, process monitor, sockets, or explicit package adapters; persisted rows are retained for audit/history only.
