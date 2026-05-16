@@ -1,7 +1,7 @@
-import { agentCapabilityCatalogOperation, agentOperation, bindAgentWorkflowOperation, createAgentOperation, deleteAgentFileOperation, deleteAgentOperation, rebuildAgentIngestionOperation, selectableAgentsOperation, updateAgentIngestionOperation, updateAgentOperation } from '@/orm';
-import type { AIAgentRecord, AgentCapabilityCatalog, AgentCreateInput, AgentRebuildIngestionInput, AgentUpdateIngestionInput } from '@/orm';
-import type { UiDataContext } from '@/dataloaders/context';
-import { assertCanPerform } from '@/dataloaders/permissions.loader';
+import { agentCapabilityCatalogOperation, agentOperation, bindAgentWorkflowOperation, createAgentOperation, deleteAgentFileOperation, deleteAgentOperation, rebuildAgentIngestionOperation, selectableAgentsOperation, updateAgentIngestionOperation, updateAgentOperation } from '@giga/dataloader/client/legacy/orm';
+import type { AIAgentRecord, AgentCapabilityCatalog, AgentCreateInput, AgentRebuildIngestionInput, AgentUpdateIngestionInput } from '@giga/dataloader/client/legacy/orm';
+import type { UiDataContext } from '@giga/dataloader/client/legacy/dataloaders/context';
+import { assertCanPerform } from '@giga/dataloader/client/legacy/dataloaders/permissions.loader';
 
 type AgentUpdatePatch = Partial<AgentCreateInput> & { isActive?: boolean };
 
